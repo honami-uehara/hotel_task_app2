@@ -1,0 +1,36 @@
+<div class="confirm_box">
+  <h2>予約確認画面</h2>
+
+   <h2 class="3price_day">￥<%= @room.price %>/日</h2>
+
+   <ul>
+     <li>チェックイン</li>
+     <li class="info"><%= @reservation.check_in_date  %></li>
+     
+     <li>チェクアウト</li>
+     <li class="info"><%= @reservation.checkout_date  %></li>
+
+     <li>使用日数</li>
+     <li class="info"><%= @reservation.total_days %></li>
+
+     <li>人数</li>
+     <li class="info"><%= @reservation.guests_count %></li>
+
+     <li>合計金額</li>
+     <li class="info"><%= @reservation.total_amount %></li>
+   </ul>
+</div>
+
+<p class="kakutei">上記内容でよろしければ予約確定を押してください</p>
+
+<%= form_with model: @reservation, url: reservations_path do |r| %>
+<%= r.hidden_field :check_in_date ,value:@reservation.check_in_date %>
+<%= r.hidden_field :checkout_dake,value:@reservation.checkout_date %>
+<%= r.hidden_field :guests_count,value:@reservation.total_days %>
+<%= r.hidden_field :total_days,value:@reservation.guests_count %>
+<%= r.hidden_field :total_days,value:@reservation.total_amount %>
+<%= r.hidden_field :room_id,value: @reservation.room_id %>
+
+<p><%= r.submit "予約を確定する",id:"submit_new_reserve" %></p>
+<p class="return_reserve_bottom"><%= link_to "予約画面に戻る", :rooms ,id:"return_reserve" %></p>
+<% end %>

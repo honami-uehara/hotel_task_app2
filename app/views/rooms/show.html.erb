@@ -1,0 +1,19 @@
+
+ <%= form_with model: @reservation, url: new_reservation_path, method: :get ,local: true do |r| %>
+    <%= r.label :check_in_date ,"チェックイン" %><br>
+    <%= r.date_field :check_in_date ,class:"reservation_day" %><br>
+    <%= r.label :checkout_date ,"チェックアウト" %><br>
+    <%= r.date_field :checkout_date ,class:"reservation_day" %><br>
+  	<%= r.label :guests_count,"人数" %><br>
+    <%= r.number_field :guests_count, min: 1 ,class:"reservation_num" %><br>
+		<%= r.hidden_field :user_id, value: current_user.id %>
+  	<%= r.hidden_field :room_id, value: @room.id %>
+  <div class="show_reservation_btns">
+    <ul >
+      <li><%= r.submit "予約を確認する",id:"if_reserve_btn" %></li>
+		  <li id="return_room_index_btn"><%= link_to "戻る", :rooms,id:"return_room_index" %></li>
+    </ul>
+  </div>
+  <% end %>
+</div>
+

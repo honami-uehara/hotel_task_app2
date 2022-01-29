@@ -1,0 +1,28 @@
+<div class="top_all">
+  <% if flash[:notice] %>
+	  <div class="flash_top">
+	    <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <div class="top_head">
+    <div class="top_search_page">
+      <div class = "search_content">
+        <h2>体験したことのない旅に出よう</h2>
+        <%= form_with url: search_rooms_path, method: :get, local: true do |s| %>
+        <%= s.text_field :search,placeholder: "Free Word..." ,class:"search_window"%><br>
+        <%= s.submit :search,value:"click", class: "top_btn"  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<div class="popular_page">
+  <div class="popular_area_page">
+    <h2>おすすめエリア</h2>
+      <ul class="popular_spot">
+        <li><%= link_to image_tag("tokyo_png", :size =>"320x480"),search_rooms_path %><p>東京</p></li>
+        <li><%= link_to image_tag("oosaka_png",:size =>"320x480" ), search_rooms_path %><p>大阪</p></li>
+        <li><%= link_to image_tag("kyoto_png",:size =>"320x480" ), search_rooms_path %><p>京都<p></li>
+        <li><%= link_to image_tag("sapporo_png", :size =>"320x480"), search_rooms_path %><p>北海道</p></li>
+  </div>
+</div>

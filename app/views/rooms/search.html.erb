@@ -1,0 +1,21 @@
+<div class="search">
+<h2 class="kensaku">検索結果 :<span>
+   <%= Room.where('name LIKE ? OR address LIKE ? OR description LIKE ?',"%#{params[:search]}%","%#{params[:search]}%","%#{params[:search]}%").count %>
+</span>件</h2>
+
+<div class="result">
+  <% @rooms.each do |room| %>
+  <ul class="result_display" >
+    <li>
+      <% if room.img.attached? %>
+        <%= image_tag room.img ,class:"room-icon" %>
+      <% end %>
+    </li>
+    <li id="name"><p><%= link_to room.name , room%></p></li>
+    <li id="address"><p><%= room.address %></p></li>
+    <li id="price"><p>¥<%= room.price %></p></li>
+   </ul>
+  <% end %>
+
+</div>
+</div>
