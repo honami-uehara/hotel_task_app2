@@ -1,0 +1,62 @@
+// Place all the styles related to the reservations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.search{
+	padding: 30px 5px 30px 25px;
+}
+.kensaku {
+	margin-top:0;
+	padding-bottom: 30px;
+	padding-top: 20px;
+	font-size: 20px;
+  color: #FFCC99;
+}
+
+.result{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.result_display{
+	margin-right: 30px;
+	margin-bottom: 20px;
+	padding-bottom: 30px;
+	border: 1px #000 solid;
+	background-color: #fff;
+}
+#name{
+  padding-left: 15px;
+  padding-top: 10px;
+}
+#name p{
+  width: fit-content;
+  font-weight: bold;
+  color: #FFCC99;
+  font-size: 20px;
+}
+
+#address{
+  padding-left: 15px;
+  padding-top:10px;
+  font-size: medium;
+  font-weight: bold;
+}
+#address p{
+  width: fit-content;
+  font-weight: bold;
+  color: #FFCC99;
+  font-size: 20px;
+}
+
+#price{
+	float: center;
+	padding-right: 15px;
+}
+#price p{
+  width: fit-content;
+  font-weight: bold;
+  color: #FFCC99;
+  font-size: 20px;
+  
+}

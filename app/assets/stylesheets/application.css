@@ -1,4 +1,4 @@
-/*
+ /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -13,3 +13,267 @@
  *= require_tree .
  *= require_self
  */
+
+ html{
+	min-height: 100%;
+ 	position: relative;
+}
+.header{
+	height: 70px;
+	width: 100%;
+	background-color:#EDFFBE;
+	position:relative;
+
+}
+.nonline{
+    text-decoration: none;
+}
+.top{
+	display: flex;
+	height: 70px;
+	justify-content: space-between;
+	margin: 0 30px;
+}
+.header_log{
+	display: flex;
+	height: 70px;
+}
+.search input[type="text"] {
+	width: 150px;
+	height: 30px;
+	font-size: medium;
+	border-radius: 5px;
+	border-color: #fff;
+}
+.search{
+	display: contents;
+	align-items: center;
+}
+.area_search{
+	margin-top: 15px;
+}
+.keyword{
+	margin-left: 5px;
+	margin-top: 15px;
+}
+.btn{
+	display: none;
+}
+
+.footer{
+	width: 100%;
+	bottom: 0;
+	height: 5em;
+	position: absolute;
+	background-color:#EDFFBE;
+}
+.footer_memo{
+	color: #fff;
+	text-align: center;
+	margin-top:30px ;
+	font-size: small;
+}
+
+/*　ハンバーガーボタン　*/
+.cf:before, .cf:after{
+  center:"";
+  display:table;
+}
+
+.cf:after{
+  clear:both;
+}
+
+.cf{
+  zoom:1;
+}    
+
+/* Form wrapper styling */
+.search-wrapper {
+width: 220px;
+margin: 45px auto 50px auto;
+box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
+}
+
+/* Form text input */
+
+.search-wrapper input {
+width: 138px;
+height: 20px;
+padding: 10px 5px;
+float: left;
+font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+border: 0;
+background: #EEE;
+border-radius: 3px 0 0 3px;
+}
+
+.search-wrapper input:focus {
+  outline: 0;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+
+.search-wrapper input::-webkit-input-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+}
+
+.search-wrapper input:-moz-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.search-wrapper input:-ms-input-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}    
+
+/* Form submit button */
+.search-wrapper button {
+overflow: visible;
+position: relative;
+float: right;
+border: 0;
+padding: 0;
+cursor: pointer;
+height: 40px;
+width: 72px;
+font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+color: white;
+text-transform: uppercase;
+background: #D83C3C;
+border-radius: 0 3px 3px 0;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+}
+ 
+.search-wrapper button:hover{     
+  background: #e54040;
+}   
+ 
+.search-wrapper button:active,
+.search-wrapper button:focus{
+  background: #c42f2f;
+  outline: 0;   
+}
+
+.search-wrapper button:before { /* left arrow */
+  content: '';
+  position: absolute;
+  border-width: 8px 8px 8px 0;
+  border-style: solid solid solid none;
+  border-color: transparent #d83c3c transparent;
+  top: 12px;
+  left: -6px;
+}
+
+.search-wrapper button:hover:before{
+  border-right-color: #e54040;
+}
+
+.search-wrapper button:focus:before,
+.search-wrapper button:active:before{
+      border-right-color: #c42f2f;
+}      
+
+.search-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+  border: 0;
+  padding: 0;
+}    
+
+.hamburger {
+display : block;
+position: fixed;
+z-index : 3;
+right : 13px;
+top   : 12px;
+width : 42px;
+height: 42px;
+cursor: pointer;
+text-align: center;
+}
+.hamburger span {
+display : block;
+position: absolute;
+width   : 30px;
+height  : 2px ;
+left    : 6px;
+background : #555;
+-webkit-transition: 0.3s ease-in-out;
+-moz-transition   : 0.3s ease-in-out;
+transition        : 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+top: 10px;
+}
+.hamburger span:nth-child(2) {
+top: 20px;
+}
+.hamburger span:nth-child(3) {
+top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+top : 16px;
+left: 6px;
+-webkit-transform: rotate(-45deg);
+-moz-transform   : rotate(-45deg);
+transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+top: 16px;
+-webkit-transform: rotate(45deg);
+-moz-transform   : rotate(45deg);
+transform        : rotate(45deg);
+}
+
+nav.globalMenuSp {
+position: fixed;
+z-index : 2;
+top  : 0;
+left : 0;
+color: #000;
+background: #fff;
+text-align: center;
+transform: translateY(-100%);
+transition: all 0.6s;
+width: 100%;
+}
+
+nav.globalMenuSp ul {
+background: #ccc;
+margin: 0 auto;
+padding: 0;
+width: 100%;
+}
+
+nav.globalMenuSp ul li {
+list-style-type: none;
+padding: 0;
+width: 100%;
+border-bottom: 1px solid #fff;
+}
+nav.globalMenuSp ul li:last-child {
+padding-bottom: 0;
+border-bottom: none;
+}
+nav.globalMenuSp ul li:hover{
+background :#ddd;
+}
+
+nav.globalMenuSp ul li a {
+display: block;
+color: #000;
+padding: 1em 0;
+text-decoration :none;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+transform: translateY(0%);

@@ -1,0 +1,24 @@
+// Place all the styles related to the schedules controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.user h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.user p {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.user-icon {
+  width: 120px;
+  border-radius: 60px;
+
+}
+
+.container {
+  width:100%;
+  text-align:center;
+  margin-top: 100px;
+}

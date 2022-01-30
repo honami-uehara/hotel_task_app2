@@ -1,0 +1,25 @@
+<div class="account_page">
+  <div class="account_main">
+    <h3>profile編集</h3>
+      <%= form_with model:@user do |f| %>
+      <% if @user.img.attached? %>
+         <%= image_tag @user.img ,class:"user-icon"%>
+      <% end %>
+      <%= f.file_field :img %>
+
+      <div>
+        <table class="acccount_table">
+          <tr>
+            <th><%= f.label :name , "ユーザー名" %></th>
+            <td><%= f.text_field :name %></td>
+          </tr>
+          <tr>
+            <th><%= f.label :introduction ,"プロフィール" %></th>
+            <td><%= f.text_area :introduction ,size: "35x5" %></td>
+          </tr>
+        </table>
+        <%= f.submit "編集を完了する" ,class:"submit_btn"%>
+      </div>
+      <% end %>
+  </div>
+</div>
